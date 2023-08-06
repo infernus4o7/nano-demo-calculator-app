@@ -13,7 +13,6 @@ def add():
     data = request.get_json()
     if 'first' not in data or 'second' not in data:
         return jsonify(error='Invalid request. Both "first" and "second" numbers are required.'), 400
-
     first = data['first']
     second = data['second']
     result = first + second
